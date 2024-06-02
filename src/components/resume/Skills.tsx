@@ -1,0 +1,61 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SkillsData } from '@/interface/resume';
+
+// Define the interface for a skill
+interface Skill {
+  name: string;
+  proficiency: number;
+}
+
+// Define the skills data
+const skillsData: Skill[] = [
+  { name: 'Photoshop', proficiency: 100 },
+  { name: 'Figma', proficiency: 90 },
+  { name: 'Adobe XD', proficiency: 60 },
+  { name: 'Adobe Illustrator', proficiency: 70 },
+  // Add more skills as needed
+];
+
+const Skills: React.FC<{skills:SkillsData[]}> = ({skills}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+    >
+      {skills.map((skill, index) => (
+        <div key={index} className="w-full lgl:w-1/2">
+          <div className="py-12 font-titleFont flex flex-col gap-4">
+            <p className="text-sm text-designColor tracking-[4px] uppercase">
+              Features
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold">{skill.name}</h2>
+          </div>
+          {
+            skill.skill.map((x,i)=>(
+              <div key={i} className="mt-14 w-full flex flex-col gap-6">
+              <div className="overflow-x-hidden">
+                <p className="text-sm uppercase font-medium">{x.name}</p>
+                <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
+                  <motion.span
+                    initial={{ x: "-100%", opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className={`w-[${x.percentage}] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative`}
+                  >
+                    <span className="absolute -top-7 right-0">{x.percentage}</span>
+                  </motion.span>
+                </span>
+              </div>
+            </div>
+            ))
+          }
+        
+        </div>
+      ))}
+    </motion.div>
+  );
+};
+
+export default Skills;
