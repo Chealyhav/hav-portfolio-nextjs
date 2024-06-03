@@ -18,7 +18,6 @@ const Navbar = () => {
       <div>
         <img src="" alt="logo" />
       </div>
-      <button className="bg-red-600 dark:bg-orange-600">sss</button>
       <div>
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
           {navLinksdata.map(({ _id, title, link }) => (

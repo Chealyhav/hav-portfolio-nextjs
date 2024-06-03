@@ -1,4 +1,6 @@
 import Banner from "@/components/banner/Banner";
+import Contact from "@/components/contact/Contact";
+import Footer from "@/components/footer/Footer";
 import Projects from "@/components/projects/Projects";
 import Resume from "@/components/resume/Resume";
 import { ModeToggle } from "@/components/them";
@@ -13,11 +15,8 @@ export default function Home() {
       <Banner/>
       <Projects projects={sampleProjects}/>
       <Resume data={resumeData} />
-      <h1 className="dark:bg-yellow-500 text-red-900">dhdhdhhd</h1>
-      <div className="h-52 bg-slate-600 dark:bg-violet-900">
-
-      </div>
-
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

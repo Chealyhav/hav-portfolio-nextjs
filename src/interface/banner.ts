@@ -1,4 +1,4 @@
-// types/index.ts
+
 export interface TypewriterProps {
     words: string[];
     loop: boolean;
@@ -7,7 +7,7 @@ export interface TypewriterProps {
     delaySpeed: number;
   }
   
-// types/index.ts
+
 export interface SocialLink {
     name: string;
     url: string;
@@ -16,7 +16,7 @@ export interface SocialLink {
   
   export interface Skill {
     name: string;
-    icon: string; // You can define the type for the icon as needed
+    icon: string;
   }
   
   export interface MediaProps {

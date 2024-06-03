@@ -13,6 +13,12 @@ export const resumeData: ResumeData = {
           result: 'First Class Honors',
           des: 'Studied various aspects of computer science including algorithms, data structures, and software engineering.',
         },
+        {
+          title: 'University of Example',
+          subTitle: 'City, Country',
+          result: 'First Class Honors',
+          des: 'Studied various aspects of computer science including algorithms, data structures, and software engineering.',
+        },
       ],
     },
     

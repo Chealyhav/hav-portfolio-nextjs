@@ -17,7 +17,7 @@ const Education: React.FC<{ sections: SectionProps[] }> = ({ sections }) => {
             <p className="text-sm text-designColor tracking-[4px]">{section.yearRange}</p>
             <h2 className="text-3xl md:text-4xl font-bold">{section.title}</h2>
           </div>
-          <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <div className="mt-6 lgl:mt-14 w-full xl:h-[500px] h-[700px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
             {section.items.map((item, idx) => (
               <ResumeCard key={idx} {...item} />
             ))}
